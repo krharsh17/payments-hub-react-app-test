@@ -5,7 +5,7 @@ function PaymentResults() {
   const [paymentResult, setPaymentResult] = useState(null)
 
   useEffect(() => {
-    const paymentResults = () => fetch('https://react-browserpost-api.onrender.com/paymentResult/getPaymentResult')
+    const paymentResults = () => fetch('https://react-browserpost-api.onrender.com/getPaymentResult')
                                .then(res => res.json())
                                .then(({ data }) => {
                                    let dataObj = JSON.parse('{"' + decodeURI(data.replace(/&/g, "\",\"").replace(/=/g,"\":\"")) + '"}')

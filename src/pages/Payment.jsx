@@ -9,7 +9,7 @@ function Payment() {
     const [cvv, setCvv] = useState('123')
 
     const TAC = JSON.parse(localStorage.getItem('TAC'))
-    const AMOUNT = JSON.parse(localStorage.getItem('productPrice')).toFixed(2)
+    const AMOUNT = JSON.parse(localStorage.getItem('productPrice') || 0).toFixed(2)
 
   return (
     <div className='mt-4'>
